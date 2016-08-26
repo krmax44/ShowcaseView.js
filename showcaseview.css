@@ -8,7 +8,7 @@
 	bottom: 0;
 	background-color: rgba(0,0,0,.35);
 	display: none;
-	background-image: url("showcase.png");
+	background-image: url("showcaseview.png");
 	background-repeat: no-repeat;
 	background-size: 100px 100px;
 	z-index: 999999;
