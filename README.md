@@ -12,7 +12,9 @@ It's very simple.
       showcaseview.highlightElement({
         element: ".btn", //required
         text: "Click this awesome button", //required
-        buttonOnly: true, //only a click of a button closes the ShowcaseView (default: false),
-        btntext: "Hide" //text of the button (default: "OK")
+        buttonOnly: true, //only a click of a button closes the ShowcaseView (default: false)
+        btntext: "Hide", //text of the button (default: "OK")
+        circle: true, //defines if the shape is a circle instead of an ellipse (default: false)
+        scroll: false //scroll to the element 
       });
     </script>

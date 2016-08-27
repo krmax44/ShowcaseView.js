@@ -1,0 +1,8 @@
+/*
+	
+	(c) 2016 krmax44
+	https://github.com/krmax44/ShowcaseView.js/
+	Released under the MIT License
+
+*/
+.showcaseview-view{position:absolute;left:0;right:0;top:0;bottom:0;background-color:rgba(0,0,0,.35);display:none;background-image:url(showcaseview.png);background-repeat:no-repeat;background-size:100px 100px;z-index:999999}.showcaseview-text{font-size:2em;color:#fff;position:fixed;left:50px;bottom:50px}.showcaseview-button{position:fixed;right:50px;bottom:50px}
