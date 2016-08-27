@@ -1,5 +1,5 @@
 # ShowcaseView.js
-ShowcaseView.js brings the awesome feature of Android in HTML. It's current state is not completely bug-free and does not always bring the perfect position of the showcase, so feel free to make the code better!
+ShowcaseView.js brings the awesome feature of Android in HTML. Feel free to use it in your projects or to contribute!
 
 ##Installation and requirements
 Just include the JavaScript and CSS file and you're done! Additionally, you need jQuery and Materialize.
@@ -18,3 +18,9 @@ It's very simple.
         scroll: false //scroll to the element 
       });
     </script>
+    
+##Changelog
+Check out the Changelog over [here](https://github.com/krmax44/ShowcaseView.js/blob/master/CHANGELOG.md).
+
+##License
+[The MIT License](https://github.com/krmax44/ShowcaseView.js/blob/master/LICENSE)
