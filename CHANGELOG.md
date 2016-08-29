@@ -1,5 +1,9 @@
 #Changelog
 
+##v0.3
+- added callback function
+- ShowcaseView is now a jQuery plugin!
+
 ##v0.2
 - fixed positioning bug
 - fixed scrolling bug
