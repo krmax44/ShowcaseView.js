@@ -9,13 +9,17 @@
 var showcaseview = {};
 
 showcaseview.inited = false;
+showcaseview.lastElem = undefined;
 showcaseview.lastOpt = undefined;
 showcaseview.active = false;
+showcaseview.lastFn = undefined;
 
 (function($) {
     $.fn.showcaseview = function(options, callback, fast) {
 
+    	showcaseview.lastElem = this;
 		showcaseview.lastOpt = options;
+		showcaseview.lastFn = callback;
 
 		var element = $(this);
 
@@ -28,17 +32,20 @@ showcaseview.active = false;
 		$(".showcaseview-view").height($(document).height()).width($(document).width());
 
 		$(".showcaseview-view").off("click");
+		$(".showcaseview-button a").off("click");
+
 		if (!options.buttonOnly) {
 			$(".showcaseview-view").on("click", function(){
 				$(".showcaseview-view").fadeOut(500, callback);
 				showcaseview.active = false;
 			});
 		}
-
-		$(".showcaseview-button a").off("click");
-		$(".showcaseview-button a").on("click", function(){
-			$(".showcaseview-view").fadeOut(500, callback);
-		})
+		else {
+			$(".showcaseview-button a").on("click", function(){
+				$(".showcaseview-view").fadeOut(500, callback);
+				showcaseview.active = false;
+			});
+		}
 
 		var $this = $(this);
 		var offset = $this.offset();
@@ -87,20 +94,9 @@ showcaseview.active = false;
 	};
 }(jQuery));
 
-showcaseview.hide = function (fast) {
-	if (fast) {
-		$(".showcaseview-view").hide();
-	}
-	else {
-		$(".showcaseview-view").fadeOut();
-	}
-
-	showcaseview.active = false;
-};
-
 $(window).on("resize", function(){
 	if (showcaseview.active) {
 		$(".showcaseview-view").hide();
-		$(showcaseview.lastElem).showcaseview(showcaseview.lastOpt, true);
+		$(showcaseview.lastElem).showcaseview(showcaseview.lastOpt, showcaseview.lastFn, true);
 	}
 });

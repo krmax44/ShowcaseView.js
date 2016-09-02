@@ -1,5 +1,8 @@
 #Changelog
 
+##v0.4
+- fixed bug that caused the callback to be fired multiple times
+
 ##v0.3
 - added callback function
 - ShowcaseView is now a jQuery plugin!
